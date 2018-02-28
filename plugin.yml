@@ -1,0 +1,21 @@
+name: AngelCardStats
+main: github.saukiya.angelcardstats.AngelCardStats
+version: 1.0.0
+author: [Saukiya]
+softdepend: []
+
+commands:
+   angelcardstats:
+      description: This is a permission command.
+      # 命令使用方法，当命令被错误使用时将显示这个
+      usage: /<command> test
+      aliases: [acs]
+permissions:
+  angelcardstats.admin:
+    description: ADMIN
+    default: op
+    children:
+      angelcardstats.reload: true
+  angelcardstats.reload:
+    description: RELOAD
+    default: op
