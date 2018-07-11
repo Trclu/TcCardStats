@@ -2,7 +2,7 @@ name: AngelCardStats
 main: github.saukiya.angelcardstats.AngelCardStats
 version: 1.0.0
 author: [Saukiya]
-softdepend: []
+softdepend: [PlaceholderAPI,AngelPoints]
 
 commands:
    angelcardstats:
@@ -11,11 +11,18 @@ commands:
       usage: /<command> test
       aliases: [acs]
 permissions:
+  angelcardstats.use:
+    description: NULL
+    default: true
+    children:
+      angelcardstats.open: true
+      angelcardstats.stats: true
+      angelcardstats.top: true
   angelcardstats.admin:
-    description: ADMIN
+    description: NULL
     default: op
     children:
+      angelcardstats.save: true
+      angelcardstats.info: true
+      angelcardstats.give: true
       angelcardstats.reload: true
-  angelcardstats.reload:
-    description: RELOAD
-    default: op

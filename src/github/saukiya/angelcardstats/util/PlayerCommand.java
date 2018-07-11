@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PlayerCommand {
-	String cmd();
-	String arg() default "";
+    String cmd();
+
+    String arg() default "";
 }
